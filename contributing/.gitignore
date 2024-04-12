@@ -1,0 +1,23 @@
+# Ignores everything
+/**/*
+
+!/.gitignore
+
+!/ways_to_contribute.rst
+
+!/documentation/
+!/documentation/index.rst
+!/documentation/building_the_documentation.rst
+!/documentation/contributing_to_the_documentation.rst
+
+!/development/
+!/development/index.rst
+
+!/development/compiling/
+!/development/compiling/index.rst
+!/development/compiling/sam_buildsystem.rst
+!/development/compiling/getting_source.rst
+!/development/compiling/compiling_engine_for_windows.rst
+!/development/compiling/compiling_console_for_windows.rst
+
+

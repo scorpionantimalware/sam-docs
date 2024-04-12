@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Compiling Console for Windows &#8212; scorpion-antimalware 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Writing documentation" href="../../documentation/index.html" />
+    <link rel="prev" title="Compiling Engine for Windows" href="compiling_engine_for_windows.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="compiling-console-for-windows">
+<span id="doc-compiling-console-for-windows"></span><h1>Compiling Console for Windows<a class="headerlink" href="#compiling-console-for-windows" title="Permalink to this headline">¶</a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>For compiling under Windows, the following is required:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.visualstudio.com/vs/community/">Visual Studio Community</a>. VS 2022
+is recommended.</p></li>
+<li><p><a class="reference external" href="https://www.qt.io/download-open-source">Qt6</a>. VS 2022
+is recommended.</p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">CMake 3.5+</a> build system.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To get the Scorpion source code for compiling, see
+<a class="reference internal" href="getting_source.html#doc-getting-source"><span class="std std-ref">Getting the source</span></a>.</p>
+</div>
+</section>
+<section id="setting-up-cmake">
+<h2>Setting up CMake<a class="headerlink" href="#setting-up-cmake" title="Permalink to this headline">¶</a></h2>
+<p>To install CMake, download the installer from the <a class="reference external" href="https://cmake.org/download/">CMake website</a> and run it.</p>
+<p>You can then check that CMake is installed by running <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--version</span></code> in a command prompt.</p>
+</section>
+<section id="downloading-console-s-source">
+<span id="doc-compiling-console-for-windows-install-vs"></span><h2>Downloading Console’s source<a class="headerlink" href="#downloading-console-s-source" title="Permalink to this headline">¶</a></h2>
+<p>Refer to <a class="reference internal" href="getting_source.html#doc-getting-source"><span class="std std-ref">Getting the source</span></a> for detailed instructions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To prevent slowdowns caused by continuous virus scanning during compilation,
+add the Scorpion source folder to the list of exceptions in your antivirus
+software.</p>
+<p>For Windows Defender, hit the <kbd class="kbd docutils literal notranslate">Windows</kbd> key, type
+“Windows Defender Settings” then hit <kbd class="kbd docutils literal notranslate">Enter</kbd>.
+Under <strong>Virus &amp; threat protection</strong>, go to <strong>Virus &amp; threat protection setting</strong>
+and scroll down to <strong>Exclusions</strong>. Click <strong>Add or remove exclusions</strong> then
+add the Scorpion source folder.</p>
+</div>
+<section id="running-cmake">
+<h3>Running CMake<a class="headerlink" href="#running-cmake" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir .build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .build
+cmake .. -G <span class="s2">&quot;Visual Studio 17 2022&quot;</span> -DCMAKE_PREFIX_PATH<span class="o">=</span><span class="s2">&quot;C:/Qt/{QT_VERSION}/{MSVC_VERSION}/lib/cmake/&quot;</span>
+</pre></div>
+</div>
+<p>You can build then with:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake --build . --config Debug
+</pre></div>
+</div>
+<p>Then you can run by:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./Debug/sam-console.exe
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The console uses a dummy engine so you don’t need to worry about the
+engine’s build. This is for faster compilation as the engine is not needed
+for developing the console.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can find our models at <a class="reference external" href="https://drive.google.com/drive/folders/1frJ8Pll8AdRHpTnSHSCPZEVvOz_FHSRT?usp=sharing">SAM Models</a>.</p>
+</div>
+<p>If all goes well, you will have our engine’s <code class="docutils literal notranslate"><span class="pre">.lib</span></code> and <code class="docutils literal notranslate"><span class="pre">.dll</span></code> files in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> folder.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Add your project build directory to the list of excluded directories of any anti-virus
+application that runs on your system.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">scorpion-antimalware</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/index.html">Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../datasets/index.html">Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scorpion development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">Writing documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/channels.html">Community channels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Scorpion development</a><ul>
+  <li><a href="index.html">Building from source</a><ul>
+      <li>Previous: <a href="compiling_engine_for_windows.html" title="previous chapter">Compiling Engine for Windows</a></li>
+      <li>Next: <a href="../../documentation/index.html" title="next chapter">Writing documentation</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ScorpionAntimalware.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/contributing/development/compiling/compiling_console_for_windows.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

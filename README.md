@@ -1,1 +1,3 @@
-# sam-docs
+# Scorpion Anti-malware Documentation
+
+![CI](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
