@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting the source &#8212; scorpion-antimalware 0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Compiling Engine for Windows" href="compiling_engine_for_windows.html" />
+    <link rel="prev" title="Building from source" href="index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-the-source">
+<span id="doc-getting-source"></span><h1>Getting the source<a class="headerlink" href="#getting-the-source" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="downloading-the-scorpion-source-code">
+<h2>Downloading the Scorpion source code<a class="headerlink" href="#downloading-the-scorpion-source-code" title="Permalink to this headline">¶</a></h2>
+<p>The source code is available on
+<a class="reference external" href="https://github.com/ScorpionAntimalware/scorpion-antimalware">ScorpionAntimalware/scorpion-antimalware</a>
+and while you can manually download it via the website, in general you want to
+do it via the <code class="docutils literal notranslate"><span class="pre">git</span></code> version control system.</p>
+<p>If you don’t know much about <code class="docutils literal notranslate"><span class="pre">git</span></code> yet, there are a great number of
+<a class="reference external" href="https://git-scm.com/book">tutorials</a> available on various websites.</p>
+<p>In general, you need to install <code class="docutils literal notranslate"><span class="pre">git</span></code> and/or one of the various GUI clients.</p>
+<p>Afterwards, to get the latest development version of the Scorpion source code
+(the unstable <code class="docutils literal notranslate"><span class="pre">master</span></code> branch), you can use
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--recurse-submodules</span> <span class="pre">--depth</span> <span class="pre">1</span> <span class="pre">--shallow-submodules</span> <span class="pre">https://github.com/ScorpionAntimalware/scorpion-antimalware.git</span></code>.</p>
+<p>If you are using the <code class="docutils literal notranslate"><span class="pre">git</span></code> command line client, this is done by entering
+the following in a terminal:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ScorpionAntimalware/scorpion-antimalware.git
+<span class="c1"># You can add the --depth 1 argument to omit the commit history.</span>
+<span class="c1"># Faster, but not all Git operations (like blame) will work.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DON’T forget to clone the submodules after cloning the repository. You can do this by running the following command:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span></code></p>
+</div>
+</div>
+<div class="section" id="downloading-the-console-source-code">
+<h2>Downloading the Console source code<a class="headerlink" href="#downloading-the-console-source-code" title="Permalink to this headline">¶</a></h2>
+<p>The source code is available on
+<a class="reference external" href="https://github.com/ScorpionAntimalware/sam-console">ScorpionAntimalware/sam-console</a>
+and while you can manually download it via the website, in general you want to
+do it via the <code class="docutils literal notranslate"><span class="pre">git</span></code> version control system using the following command:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">--recurse-submodules</span> <span class="pre">--depth</span> <span class="pre">1</span> <span class="pre">--shallow-submodules</span> <span class="pre">https://github.com/ScorpionAntimalware/sam-console.git</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">scorpion-antimalware</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/index.html">Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../datasets/index.html">Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scorpion development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">Writing documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/channels.html">Community channels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Scorpion development</a><ul>
+  <li><a href="index.html">Building from source</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Building from source</a></li>
+      <li>Next: <a href="compiling_engine_for_windows.html" title="next chapter">Compiling Engine for Windows</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ScorpionAntimalware.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/contributing/development/compiling/getting_source.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,9 +1,0 @@
-# Ignores everything
-/**/*
-
-!/.gitignore
-
-!/index.rst
-!/static_ann_datasets.rst
-!/static_cnn_datasets.rst
-!/static_voter_datasets.rst

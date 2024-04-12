@@ -1,6 +1,0 @@
-# Ignores everything
-/**/*
-
-!/.gitignore
-
-!/channels.rst

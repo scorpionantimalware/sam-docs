@@ -1,8 +1,0 @@
-{
-    // Exclude external projects from search results.
-    "search.exclude": {
-        "_build": true
-    },
-    "editor.formatOnSave": true,
-    "files.insertFinalNewline": true
-}

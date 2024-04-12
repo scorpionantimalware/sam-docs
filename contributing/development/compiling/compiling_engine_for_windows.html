@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Compiling Engine for Windows &#8212; scorpion-antimalware 0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Compiling Console for Windows" href="compiling_console_for_windows.html" />
+    <link rel="prev" title="Getting the source" href="getting_source.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="compiling-engine-for-windows">
+<span id="doc-compiling-engine-for-windows"></span><h1>Compiling Engine for Windows<a class="headerlink" href="#compiling-engine-for-windows" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>For compiling under Windows, the following is required:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.visualstudio.com/vs/community/">Visual Studio Community</a>. VS 2022
+is recommended.</p></li>
+<li><p><a class="reference external" href="https://github.com/microsoft/onnxruntime">ONNXRUNTIME</a>. v1.17.1 is recommended.
+You can download directly from the <a class="reference external" href="https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-1.17.1.zip">onnxruntime-win-x64-1.17.1.zip</a>
+or <a class="reference external" href="https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-cuda12-1.17.1.zip">onnxruntime-win-x64-cuda12-1.17.1.zip</a> or
+<a class="reference external" href="https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-gpu-1.17.1.zip">onnxruntime-win-x64-gpu-1.17.1.zip</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a>.</p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">CMake 3.5+</a> build system.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>To get the Scorpion source code for compiling, see
+<a class="reference internal" href="getting_source.html#doc-getting-source"><span class="std std-ref">Getting the source</span></a>.</p>
+</div>
+</div>
+<div class="section" id="setting-up-cmake">
+<h2>Setting up CMake<a class="headerlink" href="#setting-up-cmake" title="Permalink to this headline">¶</a></h2>
+<p>To install CMake, download the installer from the <a class="reference external" href="https://cmake.org/download/">CMake website</a> and run it.</p>
+<p>You can then check that CMake is installed by running <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--version</span></code> in a command prompt.</p>
+</div>
+<div class="section" id="downloading-scorpion-s-source">
+<span id="doc-compiling-engine-for-windows-install-vs"></span><h2>Downloading Scorpion’s source<a class="headerlink" href="#downloading-scorpion-s-source" title="Permalink to this headline">¶</a></h2>
+<p>Refer to <a class="reference internal" href="getting_source.html#doc-getting-source"><span class="std std-ref">Getting the source</span></a> for detailed instructions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To prevent slowdowns caused by continuous virus scanning during compilation,
+add the Scorpion source folder to the list of exceptions in your antivirus
+software.</p>
+<p>For Windows Defender, hit the <kbd class="kbd docutils literal notranslate">Windows</kbd> key, type
+“Windows Defender Settings” then hit <kbd class="kbd docutils literal notranslate">Enter</kbd>.
+Under <strong>Virus &amp; threat protection</strong>, go to <strong>Virus &amp; threat protection setting</strong>
+and scroll down to <strong>Exclusions</strong>. Click <strong>Add or remove exclusions</strong> then
+add the Scorpion source folder.</p>
+</div>
+<div class="section" id="running-cmake">
+<h3>Running CMake<a class="headerlink" href="#running-cmake" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir .build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .build
+cmake .. -G <span class="s2">&quot;Visual Studio 17 2022&quot;</span> -DSAM_STATIC_ANN_ONNX_MODELPATH<span class="o">=</span><span class="s2">&quot;path/to/ANN-78M-in2381-h11-out1-v0.onnx&quot;</span>
+                                    -DSAM_STATIC_ANN_STANDARDIZE_PARAMS<span class="o">=</span><span class="s2">&quot;path/to/standardize-params-20240307_181717.pkl&quot;</span>
+                                    -DSAM_STATIC_CNN_COLORMAP<span class="o">=</span><span class="s2">&quot;path/to/gray_colormap.npy&quot;</span>
+                                    -DSAM_ONNXRUNTIME_ROOTDIR<span class="o">=</span><span class="s2">&quot;path/to/onnxruntime-win-x64-1.17.1/&quot;</span>
+                                    -DSAM_STATIC_CNN_ONNX_MODELPATH<span class="o">=</span><span class="s2">&quot;path/to/CNN-model3-167M-in(1,256,256)-out1.onnx&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to download our trained models in order to compile the engine.
+Check <a class="reference internal" href="../../../models/index.html#doc-models"><span class="std std-ref">Models</span></a> for more information.</p>
+</div>
+<p>You can build then with:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake --build . --config Debug
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When compiling with <code class="docutils literal notranslate"><span class="pre">-DSAM_BUILD_TESTS=ON</span></code>, you will get multiple
+warnings about linking, you can ignore them.</p>
+</div>
+<p>If all goes well, you will have our engine’s <code class="docutils literal notranslate"><span class="pre">.lib</span></code> and <code class="docutils literal notranslate"><span class="pre">.dll</span></code> files in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> folder.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to test the engine, you can build with <code class="docutils literal notranslate"><span class="pre">-DSAM_BUILD_CLI_TOOLS=ON</span></code> and run the
+executable. DON’T forget to add the directories you want to scan inside <code class="docutils literal notranslate"><span class="pre">.build/sam-cli-tools/scanareasprocessor_output.pathl</span></code>
+file. You can then run the executable in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> folder.
+.. code-block:: shell</p>
+<blockquote>
+<div><p>./sam-cli-tools/Debug/sam-cli-tools.exe</p>
+</div></blockquote>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Add your project build directory to the list of excluded directories of any anti-virus
+application that runs on your system.</p>
+</div>
+</div>
+</div>
+<div class="section" id="linking-the-console">
+<h2>Linking The Console<a class="headerlink" href="#linking-the-console" title="Permalink to this headline">¶</a></h2>
+<p>To link the console, you will need to run cmake with <code class="docutils literal notranslate"><span class="pre">-DSAM_LINK_CONSOLE=ON</span></code> and give it
+the prefix of the console’s path. For example, if you want to link the console, you will run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake .. -G <span class="s2">&quot;Visual Studio 17 2022&quot;</span> -DSAM_STATIC_ANN_ONNX_MODELPATH<span class="o">=</span><span class="s2">&quot;path/to/ANN-78M-in2381-h11-out1-v0.onnx&quot;</span>
+                                    -DSAM_STATIC_ANN_STANDARDIZE_PARAMS<span class="o">=</span><span class="s2">&quot;path/to/standardize-params-20240307_181717.pkl&quot;</span>
+                                    -DSAM_STATIC_CNN_COLORMAP<span class="o">=</span><span class="s2">&quot;path/to/gray_colormap.npy&quot;</span>
+                                    -DSAM_ONNXRUNTIME_ROOTDIR<span class="o">=</span><span class="s2">&quot;path/to/onnxruntime-win-x64-1.17.1/&quot;</span>
+                                    -DSAM_STATIC_CNN_ONNX_MODELPATH<span class="o">=</span><span class="s2">&quot;path/to/CNN-model3-167M-in(1,256,256)-out1.onnx&quot;</span>
+                                    -DSAM_LINK_CONSOLE<span class="o">=</span>ON
+                                    -DCMAKE_PREFIX_PATH<span class="o">=</span><span class="s2">&quot;C:/Qt/{QT_VERSION}/{MSVC_VERSION}/lib/cmake/&quot;</span>
+</pre></div>
+</div>
+<p>Then run the build command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake --build . --config Debug
+</pre></div>
+</div>
+<p>Then run the console executable in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> folder.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./Debug/scorpion-antimalware.exe
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-embedding">
+<h2>Python Embedding<a class="headerlink" href="#python-embedding" title="Permalink to this headline">¶</a></h2>
+<p>We embed Python 3.12 in our engine to run the Python scripts. You will need to get the
+packages required from the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in the root.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>to use the Python modules with no problems, you need to make sure that
+<code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">debug</span> <span class="pre">binaries</span></code> option is checked in the Advanced <code class="docutils literal notranslate"><span class="pre">Options</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Check <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">to</span> <span class="pre">enviroment</span> <span class="pre">variables`</span></code> option in the installation wizard.</p>
+</div>
+</div>
+<div class="section" id="running-engine-s-tests">
+<h2>Running Engine’s Tests<a class="headerlink" href="#running-engine-s-tests" title="Permalink to this headline">¶</a></h2>
+<p>To run the tests, you will need to run cmake with <code class="docutils literal notranslate"><span class="pre">-DSAM_BUILD_TESTS=ON</span></code> and then run the
+corresponding test executable in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> folder.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./tests/Debug/sam-engine-tests.exe
+</pre></div>
+</div>
+<p>You will find the command for each test case in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> folder.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">scorpion-antimalware</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/index.html">Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../datasets/index.html">Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scorpion development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">Writing documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/channels.html">Community channels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Scorpion development</a><ul>
+  <li><a href="index.html">Building from source</a><ul>
+      <li>Previous: <a href="getting_source.html" title="previous chapter">Getting the source</a></li>
+      <li>Next: <a href="compiling_console_for_windows.html" title="next chapter">Compiling Console for Windows</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ScorpionAntimalware.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/contributing/development/compiling/compiling_engine_for_windows.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
