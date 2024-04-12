@@ -1,6 +1,0 @@
-.. _doc_best_practices_for_scorpion_contributors:
-
-Best practices for Scorpion contributors
-========================================
-
-

@@ -1,8 +1,0 @@
-.. _doc_sam_buildsystem:
-
-Introduction to the buildsystem
-===============================
-
-.. highlight:: shell
-
-
