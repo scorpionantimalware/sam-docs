@@ -118,6 +118,9 @@ Then run the console executable in the ``.build`` folder.
 
     ./Debug/scorpion-antimalware.exe
 
+.. note:: You will need to add ``C:/Qt/{QT_VERSION}/{MSVC_VERSION}/bin/`` to PATH in order to run 
+          the software without errors.
+
 Python Embedding
 ----------------
 
