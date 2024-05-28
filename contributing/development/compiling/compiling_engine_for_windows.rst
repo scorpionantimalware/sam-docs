@@ -131,7 +131,7 @@ packages required from the ``requirements.txt`` file in the root.
 .. note:: to use the Python modules with no problems, you need to make sure that 
           ``Download debug binaries`` option is checked in the Advanced ``Options``.
 
-.. note:: Check ``Add Python to enviroment variables``` option in the installation wizard.
+.. note:: Check ``Add Python to enviroment variables`` option in the installation wizard.
 
 Running Engine's Tests
 ----------------------
