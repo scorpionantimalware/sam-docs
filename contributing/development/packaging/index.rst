@@ -28,7 +28,7 @@ Steps
 
     .. code-block:: shell
 
-        cpack -G NSIS
+        cpack -G NSIS -C Debug
 
     The installer will be created in the ``.build`` directory.
 
