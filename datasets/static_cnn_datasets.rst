@@ -12,6 +12,8 @@ We have maintained our datasets on Kaggke and here is a reference to the dataset
 
 The following table describes the datasets used in the Dynamic CNN BiGRU model.
 
+
+
 .. list-table:: Raw Benign Datasets
    :widths: 25 25 25 50 50
    :header-rows: 1
@@ -82,6 +84,9 @@ The following table describes the datasets used in the Dynamic CNN BiGRU model.
      - N/A
      - https://www.kaggle.com/datasets/aabenigns/benigns-exe-sf-600-1000
 
+
+
+
 .. list-table:: Raw Malware Datasets
    :widths: 25 25 25 25 50
    :header-rows: 1
@@ -103,6 +108,9 @@ The following table describes the datasets used in the Dynamic CNN BiGRU model.
      - 64
      - N/A
      - https://www.kaggle.com/datasets/pwn3xt/new-malware
+
+
+
 
 .. list-table:: Image Benign Datasets
    :widths: 25 25 25 25 50
@@ -167,6 +175,9 @@ The following table describes the datasets used in the Dynamic CNN BiGRU model.
      - 14,897
      - N/A
      - https://www.kaggle.com/datasets/pwn3xt/benign
+
+
+
 
 .. list-table:: Image Malware Datasets
    :widths: 25 25 25 25 50
