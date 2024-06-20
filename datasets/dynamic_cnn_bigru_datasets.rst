@@ -35,7 +35,7 @@ The following table describes the datasets used in the Dynamic CNN BiGRU model.
      - `Dynamic_datasets_formatting_and_EDA.ipynb <https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb>`_
    * - oliveira
      - 1079
-     - 42797
+     - 42,797
      - `Behavioral Malware Detection Using Deep Graph Convolutional Neural Networks <https://doi.org/10.36227/techrxiv.10043099.v1>`_
      - https://ieee-dataport.org/open-access/malware-analysis-datasets-api-call-sequences
      - `Dynamic_datasets_formatting_and_EDA.ipynb <https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb>`_
