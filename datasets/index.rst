@@ -14,3 +14,4 @@ Here we provide a list of datasets that we use to train our models.
    static_ann_datasets
    static_cnn_datasets
    static_voter_datasets
+   dynamic_cnn_bigru_datasets
