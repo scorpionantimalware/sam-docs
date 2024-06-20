@@ -13,7 +13,7 @@ We have maintained our datasets on Kaggke and here is a reference to the dataset
 The following table describes the datasets used in the Dynamic CNN BiGRU model.
 
 .. list-table:: Raw Benign Datasets
-   :widths: 25 25 25 25 50
+   :widths: 25 25 25 50 50
    :header-rows: 1
 
    * - Dataset Name
