@@ -19,8 +19,6 @@ For compiling under Windows, the following is required:
 - `pybind11 <https://github.com/pybind/pybind11>`_.
 - `CMake 3.5+ <https://cmake.org/download/>`_ build system.
 - `Python3 <https://www.python.org/downloads/>`_.
-- `Miniconda <https://cmake.org/download/>`_ for creating Python2 environment.
-- `Python2 <https://cmake.org/download/>`_ for running cuckoo sandbox. You will need also `Microsoft Visual C++ Compiler for Python 2.7 <https://web.archive.org/web/20190720195601/https://download.microsoft.com/download/7/9/6/796EF2E4-801B-4FC4-AB28-B59FBF6D907B/VCForPython27.msi>`_.
 
 .. seealso:: To get the Scorpion source code for compiling, see
              :ref:`doc_getting_source`.
