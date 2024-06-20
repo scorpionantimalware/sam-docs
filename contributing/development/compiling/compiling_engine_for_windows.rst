@@ -18,6 +18,7 @@ For compiling under Windows, the following is required:
   `onnxruntime-win-x64-gpu-1.17.1.zip <https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-gpu-1.17.1.zip>`_.
 - `pybind11 <https://github.com/pybind/pybind11>`_.
 - `CMake 3.5+ <https://cmake.org/download/>`_ build system.
+- `Python3 <https://www.python.org/downloads/>`_.
 
 .. seealso:: To get the Scorpion source code for compiling, see
              :ref:`doc_getting_source`.
