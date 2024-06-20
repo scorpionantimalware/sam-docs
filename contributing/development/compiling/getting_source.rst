@@ -12,7 +12,7 @@ Downloading the Scorpion source code
 .. and compiling Scorpion, you need to actually download the Scorpion source code.
 
 The source code is available on 
-`ScorpionAntimalware/scorpion-antimalware <https://github.com/ScorpionAntimalware/scorpion-antimalware>`_
+`scorpionantimalware/scorpion-antimalware <https://github.com/scorpionantimalware/scorpion-antimalware>`_
 and while you can manually download it via the website, in general you want to
 do it via the ``git`` version control system.
 
@@ -23,14 +23,14 @@ In general, you need to install ``git`` and/or one of the various GUI clients.
 
 Afterwards, to get the latest development version of the Scorpion source code
 (the unstable ``master`` branch), you can use 
-``git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/ScorpionAntimalware/scorpion-antimalware.git``.
+``git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/scorpionantimalware/scorpion-antimalware.git``.
 
 If you are using the ``git`` command line client, this is done by entering
 the following in a terminal:
 
 ::
 
-    git clone https://github.com/ScorpionAntimalware/scorpion-antimalware.git
+    git clone https://github.com/scorpionantimalware/scorpion-antimalware.git
     # You can add the --depth 1 argument to omit the commit history.
     # Faster, but not all Git operations (like blame) will work.
 
@@ -44,8 +44,8 @@ Downloading the Console source code
 -----------------------------------
 
 The source code is available on 
-`ScorpionAntimalware/sam-console <https://github.com/ScorpionAntimalware/sam-console>`_
+`scorpionantimalware/sam-console <https://github.com/scorpionantimalware/sam-console>`_
 and while you can manually download it via the website, in general you want to
 do it via the ``git`` version control system using the following command:
-``git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/ScorpionAntimalware/sam-console.git``.
+``git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/scorpionantimalware/sam-console.git``.
 

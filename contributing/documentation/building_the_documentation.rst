@@ -22,7 +22,7 @@ Before you get started, make sure that you have:
 
     .. code:: sh
 
-        git clone https://github.com/ScorpionAntimalware/sam-docs.git
+        git clone https://github.com/scorpionantimalware/sam-docs.git
 
 .. note:: You can add the --depth 1 argument to omit the commit history.
           Faster, but not all Git operations (like blame) will work.

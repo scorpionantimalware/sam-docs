@@ -4,4 +4,4 @@ Community channels
 ==================
 
 Currently, Scorpion does not have a community channel. You can open a discussion on the 
-`GitHub repository <https://github.com/ScorpionAntimalware/scorpion-antimalware/discussions>`_.
+`GitHub repository <https://github.com/scorpionantimalware/scorpion-antimalware/discussions>`_.
