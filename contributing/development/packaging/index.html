@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Scorpion Anti-malware Build System &#8212; scorpion-antimalware 0.1 documentation</title>
+    <title>Packaging &#8212; scorpion-antimalware 0.1 documentation</title>
     <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -14,6 +14,8 @@
     <script src="../../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Writing documentation" href="../../documentation/index.html" />
+    <link rel="prev" title="Compiling Console for Windows" href="../compiling/compiling_console_for_windows.html" />
    
   <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
   
@@ -30,8 +32,38 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="scorpion-anti-malware-build-system">
-<span id="doc-sam-buildsystem"></span><h1>Scorpion Anti-malware Build System<a class="headerlink" href="#scorpion-anti-malware-build-system" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="packaging">
+<h1>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>For packaging under Windows, the following is required:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nsis.sourceforge.io/Download">NSIS 3.10</a>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need the Full version of NSIS, not the Lite version or the Minimal version.</p>
+</div>
+</div>
+<div class="section" id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Run CMake and build the project in Release mode.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir .build
+<span class="nb">cd</span> .build
+cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ..
+cmake --build . --config Release
+</pre></div>
+</div>
+</li>
+<li><p>Run the following command to create the installer:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cpack -G NSIS -C Debug
+</pre></div>
+</div>
+<p>The installer will be created in the <code class="docutils literal notranslate"><span class="pre">.build</span></code> directory.</p>
+</li>
+</ol>
+</div>
 </div>
 
 
@@ -56,8 +88,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../datasets/index.html">Datasets</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Scorpion development</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scorpion development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">Writing documentation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Community</span></p>
@@ -69,6 +101,10 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Scorpion development</a><ul>
+      <li>Previous: <a href="../compiling/compiling_console_for_windows.html" title="previous chapter">Compiling Console for Windows</a></li>
+      <li>Next: <a href="../../documentation/index.html" title="next chapter">Writing documentation</a></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
@@ -102,7 +138,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../../../_sources/contributing/development/compiling/sam_buildsystem.rst.txt"
+      <a href="../../../_sources/contributing/development/packaging/index.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

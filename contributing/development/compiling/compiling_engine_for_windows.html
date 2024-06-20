@@ -46,6 +46,7 @@ or <a class="reference external" href="https://github.com/microsoft/onnxruntime/
 <a class="reference external" href="https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-gpu-1.17.1.zip">onnxruntime-win-x64-gpu-1.17.1.zip</a>.</p></li>
 <li><p><a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a>.</p></li>
 <li><p><a class="reference external" href="https://cmake.org/download/">CMake 3.5+</a> build system.</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python3</a>.</p></li>
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -85,7 +86,7 @@ cmake .. -G <span class="s2">&quot;Visual Studio 17 2022&quot;</span> -DSAM_STAT
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to download our trained models in order to compile the engine.
-Check <a class="reference internal" href="../../../models/index.html#doc-models"><span class="std std-ref">Models</span></a> for more information.</p>
+Check <span class="xref std std-ref">doc_models</span> for more information.</p>
 </div>
 <p>You can build then with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cmake --build . --config Debug
@@ -135,6 +136,11 @@ the prefix of the console’s path. For example, if you want to link the console
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./Debug/scorpion-antimalware.exe
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to add <code class="docutils literal notranslate"><span class="pre">C:/Qt/{QT_VERSION}/{MSVC_VERSION}/bin/</span></code> to PATH in order to run
+the software without errors.</p>
+</div>
 </div>
 <div class="section" id="python-embedding">
 <h2>Python Embedding<a class="headerlink" href="#python-embedding" title="Permalink to this headline">¶</a></h2>
@@ -150,7 +156,7 @@ packages required from the <code class="docutils literal notranslate"><span clas
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Check <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">to</span> <span class="pre">enviroment</span> <span class="pre">variables`</span></code> option in the installation wizard.</p>
+<p>Check <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Python</span> <span class="pre">to</span> <span class="pre">enviroment</span> <span class="pre">variables</span></code> option in the installation wizard.</p>
 </div>
 </div>
 <div class="section" id="running-engine-s-tests">
@@ -181,10 +187,6 @@ corresponding test executable in the <code class="docutils literal notranslate">
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Models</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../models/index.html">Models</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Datasets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../datasets/index.html">Datasets</a></li>

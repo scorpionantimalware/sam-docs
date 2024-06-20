@@ -13,14 +13,6 @@ corner.
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: Models
-   :name: models
-
-   models/index
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1
    :caption: Datasets
    :name: datasets
 

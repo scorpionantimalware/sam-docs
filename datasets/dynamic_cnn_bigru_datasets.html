@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic CNN BiGRU Datasets &#8212; scorpion-antimalware 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scorpion development" href="../contributing/development/index.html" />
+    <link rel="prev" title="Static Voter Datasets" href="static_voter_datasets.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dynamic-cnn-bigru-datasets">
+<span id="doc-dynamic-cnn-bigru-datasets"></span><h1>Dynamic CNN BiGRU Datasets<a class="headerlink" href="#dynamic-cnn-bigru-datasets" title="Permalink to this headline">¶</a></h1>
+<p>The following table describes the datasets used in the Dynamic CNN BiGRU model.</p>
+<table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-text">Dynamic CNN BiGRU Datasets</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset Name</p></th>
+<th class="head"><p>Benign Samples</p></th>
+<th class="head"><p>Malicious Samples</p></th>
+<th class="head"><p>Related Papers</p></th>
+<th class="head"><p>Links</p></th>
+<th class="head"><p>Extraction Script Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mal2019</p></td>
+<td><p>0</p></td>
+<td><p>7107</p></td>
+<td><p><a class="reference external" href="http://dx.doi.org/10.1109/SIU.2019.8806571">Classification of Methamorphic Malware with Deep Learning (LSTM)</a>, <a class="reference external" href="https://www.researchgate.net/publication/332877263_A_Benchmark_API_Call_Dataset_For_Windows_PE_Malware_Classification">A Benchmark API Call Dataset For Windows PE Malware Classification</a>.</p></td>
+<td><p><a class="reference external" href="https://github.com/ocatak/malware_api_class">https://github.com/ocatak/malware_api_class</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb">Dynamic_datasets_formatting_and_EDA.ipynb</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>malbehav</p></td>
+<td><p>1285</p></td>
+<td><p>1285</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1016/j.jnca.2023.103704">API-MalDetect: Automated malware detection framework for windows based on API calls and deep learning techniques</a></p></td>
+<td><p><a class="reference external" href="https://github.com/mpasco/MalbehavD-V1">https://github.com/mpasco/MalbehavD-V1</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb">Dynamic_datasets_formatting_and_EDA.ipynb</a></p></td>
+</tr>
+<tr class="row-even"><td><p>friendllcc</p></td>
+<td><p>2000</p></td>
+<td><p>2000</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1016/j.cose.2022.102686">A novel deep framework for dynamic malware detection based on API sequence intrinsic features</a></p></td>
+<td><p><a class="reference external" href="https://github.com/friendllcc/Malware-Detection-API-Sequence-Intrinsic-Features">https://github.com/friendllcc/Malware-Detection-API-Sequence-Intrinsic-Features</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb">Dynamic_datasets_formatting_and_EDA.ipynb</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>oliveira</p></td>
+<td><p>1079</p></td>
+<td><p>42,797</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.36227/techrxiv.10043099.v1">Behavioral Malware Detection Using Deep Graph Convolutional Neural Networks</a></p></td>
+<td><p><a class="reference external" href="https://ieee-dataport.org/open-access/malware-analysis-datasets-api-call-sequences">https://ieee-dataport.org/open-access/malware-analysis-datasets-api-call-sequences</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb">Dynamic_datasets_formatting_and_EDA.ipynb</a></p></td>
+</tr>
+<tr class="row-even"><td><p>allan</p></td>
+<td><p>100</p></td>
+<td><p>452</p></td>
+<td><p><a class="reference external" href="http://dx.doi.org/10.13140/RG.2.2.14417.68960">Windows PE API calls for malicious and benigin programs</a></p></td>
+<td><p><a class="reference external" href="https://www.researchgate.net/publication/336024802_Windows_PE_API_calls_for_malicious_and_benigin_programs/link/5d8b6a4e92851c33e9395c89/download?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19">https://www.researchgate.net/publication/336024802_Windows_PE_API_calls_for_malicious_and_benigin_programs/link/5d8b6a4e92851c33e9395c89/download?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/Dynamic_datasets_formatting_and_EDA.ipynb">Dynamic_datasets_formatting_and_EDA.ipynb</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>zenodo</p></td>
+<td><p>946</p></td>
+<td><p>891</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.5281/zenodo.1203289">Dynamic Malware Analysis kernel and user-level calls</a></p></td>
+<td><p><a class="reference external" href="https://zenodo.org/records/1203289">https://zenodo.org/records/1203289</a></p></td>
+<td><p><a class="reference external" href="https://github.com/scorpionantimalware/sam-cnn-bigru-dynamic-pe-classifier/blob/master/data/zenodo_formatted_dataset.ipynb">zenodo_formatted_dataset.ipynb</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">scorpion-antimalware</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Datasets</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/development/index.html">Scorpion development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/documentation/index.html">Writing documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/channels.html">Community channels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Datasets</a><ul>
+      <li>Previous: <a href="static_voter_datasets.html" title="previous chapter">Static Voter Datasets</a></li>
+      <li>Next: <a href="../contributing/development/index.html" title="next chapter">Scorpion development</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ScorpionAntimalware.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/datasets/dynamic_cnn_bigru_datasets.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

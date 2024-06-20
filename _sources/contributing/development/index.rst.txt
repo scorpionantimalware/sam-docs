@@ -12,3 +12,4 @@ internal structure of the codebase, how to set up your working environment, and 
    :name: toc-contributing-to-scorpion
 
    compiling/index
+   packaging/index
