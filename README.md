@@ -1,3 +1,3 @@
 # Scorpion Anti-malware Documentation
 
-![CI](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+![CI](https://github.com/scorpionantimalware/sam-docs/actions/workflows/sphinx.yml/badge.svg)
