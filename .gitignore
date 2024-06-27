@@ -28,7 +28,10 @@
 !/datasets/**/*
 
 !/imgs/
-!/imgs/about/
+!/imgs/**/*
+
+!/resources/
+!/resources/**/*
 
 !/.editorconfig
 !/.gitattributes
