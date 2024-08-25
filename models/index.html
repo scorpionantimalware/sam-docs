@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Models &#8212; scorpion-antimalware 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Datasets" href="../datasets/index.html" />
+    <link rel="prev" title="Scorpion Anti-malware’s Docs" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="models">
+<span id="doc-models"></span><h1>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h1>
+<p>Our proposed architecture demonstrates superior performance compared to individual models. We evaluated its efficacy using 130 new zero-day samples obtained from MalwareBazaar, analyzing them through a cloud sandbox employing web scraping techniques. The results were as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>81 samples were correctly identified as malware (true positives)</p></li>
+<li><p>43 samples were incorrectly classified as benign (false positives)</p></li>
+<li><p>6 samples remained unclassified</p></li>
+</ul>
+</div></blockquote>
+<p>Notably, our static analysis pipeline successfully processed some samples that the dynamic model failed to classify.</p>
+<p>Furthermore, we observed interesting outcomes in cases where the static and dynamic pipelines yielded different results:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>9 samples, vaguely classified as benign by the static pipeline but unclassified by the dynamic model, were ultimately categorized as benign.</p></li>
+<li><p>7 samples, vaguely classified as malware by the static pipeline but unclassified by the dynamic model, were ultimately categorized as malware.</p></li>
+</ul>
+</div></blockquote>
+<p>To assess the system’s performance on benign files, we collected 104 new samples from the Windows partition. These were subjected to the same cloud sandbox analysis with web scraping techniques. The results were impressive:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>All 104 samples were correctly identified as benign (true negatives)</p></li>
+<li><p>No samples were misclassified as malware (zero false negatives)</p></li>
+</ul>
+</div></blockquote>
+<p>As with the malware samples, our static analysis pipeline successfully processed some benign samples that the dynamic model failed to classify.</p>
+<p>These results underscore the robustness and accuracy of our proposed architecture in identifying both malware and benign files, showcasing its potential for real-world applications in cybersecurity.</p>
+<p>We have tested each model on its own on these 130 Malware samples and here is the result:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We used an 0.5 boundry in all experiments.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/current-results-cm.png"><img alt="Current Results Confusion Matrix" class="align-center" src="../_images/current-results-cm.png" style="width: 100%;" /></a>
+<p>Note that if you want to check these results, here are our samples with reports: <a class="reference external" href="https://drive.google.com/file/d/1Nq3FP96aROv-m3Qzy91LKcfcNkK5weAd/view?usp=drive_link">Malware samples</a> and <a class="reference external" href="https://drive.google.com/file/d/1mSJhi2RgCdOYPFSvTJ_0MADaQw-nij5A/view?usp=drive_link">Benign samples</a>.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">scorpion-antimalware</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Models</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/index.html">Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/development/index.html">Scorpion development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/documentation/index.html">Writing documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../community/channels.html">Community channels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Scorpion Anti-malware’s Docs</a></li>
+      <li>Next: <a href="../datasets/index.html" title="next chapter">Datasets</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Scorpion Anti-malware.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/models/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
