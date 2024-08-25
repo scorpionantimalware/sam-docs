@@ -93,7 +93,7 @@ We have tested each model on its own on these 130 Malware samples and here is th
      - 0
      - - / -
 
-.. image:: imgs/current-results-cm.png
+.. image:: ../imgs/current-results-cm.png
   :align: center
   :width: 100%
   :alt: Current Results Confusion Matrix
