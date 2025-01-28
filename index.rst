@@ -6,7 +6,7 @@ Scorpion Anti-malware's Docs
   :width: 250
   :alt: Scorpion Anti-malware Logo
 
-Welcome to the official documentation of `Scorpion Anti-malware <https://scorpionantimalware.github.io/scorpion-antimalware-website/>`_, the AI powered 
+Welcome to the official documentation of `Scorpion Anti-malware <https://scorpionantimalware.github.io/sam-website/>`_, the AI powered 
 anti-malware framework!
 
 .. image:: imgs/sam-scan-feature.png
