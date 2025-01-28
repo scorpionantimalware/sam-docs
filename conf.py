@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "scorpion-antimalware"
-copyright = "2023, Scorpion Anti-malware"
+copyright = "2025, Scorpion Anti-malware"
 author = "Scorpion Anti-malware"
-release = "0.1"
+release = "1.0.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

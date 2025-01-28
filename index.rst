@@ -53,6 +53,14 @@ corner.
 .. toctree::
    :hidden:
    :maxdepth: 1
+   :caption: Google Summer of Code
+   :name: google_summer_of_code
+
+   google_summer_of_code/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
    :caption: Community
    :name: community
 
