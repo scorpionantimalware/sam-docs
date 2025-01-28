@@ -27,7 +27,11 @@ fi
 # Get the current branch name
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-if [ "$current_branch" = "master" ] || [ "$current_branch" = "master-ready" ] || [[ "$current_branch" == "master-published" ]]; then
+# Define an array of protected branches
+protected_branches=("master-ready" "master-published")
+
+# Check if the current branch is in the list of protected branches
+if [[ " ${protected_branches[@]} " =~ " $current_branch " ]]; then
     echo "Error: Cannot push changes to the $current_branch branch."
     exit 1
 fi
