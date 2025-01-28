@@ -3,6 +3,8 @@
 Models
 ======
 
+You can find our models at `SAM Models <https://drive.google.com/drive/folders/1frJ8Pll8AdRHpTnSHSCPZEVvOz_FHSRT?usp=sharing>`_.
+
 Our proposed architecture demonstrates superior performance compared to individual models. We evaluated its efficacy using 130 new zero-day samples obtained from MalwareBazaar, analyzing them through a cloud sandbox employing web scraping techniques. The results were as follows:
 
  - 81 samples were correctly identified as malware (true positives)
