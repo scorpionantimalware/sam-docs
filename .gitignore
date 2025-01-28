@@ -27,6 +27,9 @@
 !/datasets/
 !/datasets/**/*
 
+!/google_summer_of_code/
+!/google_summer_of_code/**/*
+
 !/imgs/
 !/imgs/**/*
 
